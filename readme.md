@@ -1,1 +1,2 @@
-This is just a file for testing if things are working fine
+# Ansible 101
+This is 101 for ansible to further consolidate linux knowledge
