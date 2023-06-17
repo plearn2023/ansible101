@@ -1,0 +1,17 @@
+# first playbook to install apache
+---
+- name: First playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: update repo
+    apt:
+      update_cache: yes
+  - name: Apache Web Server Package
+    apt:
+      name: apache2
+      state: latest
+  - name: Php support for Apache 
+    apt:
+      name: libapache2-mod-php
+      state: latest

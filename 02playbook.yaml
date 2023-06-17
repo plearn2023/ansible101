@@ -1,0 +1,14 @@
+# first playbook to install apache
+---
+- name: First playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Apache Web Server Package
+    apt:
+      name: apache2
+      state: absent
+  - name: Php support for Apache 
+    apt:
+      name: libapache2-mod-php
+      state: absent
